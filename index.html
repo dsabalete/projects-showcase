@@ -12,9 +12,11 @@
       (function() {
         try {
           var stored = localStorage.getItem('theme')
-          if (stored === 'dark' || (!stored && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark')
-          }
+          var theme = stored === 'dark' || stored === 'light'
+            ? stored
+            : window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+          document.documentElement.classList.toggle('dark', theme === 'dark')
+          document.documentElement.classList.toggle('light', theme === 'light')
         } catch(e) {}
       })()
     </script>

@@ -1,13 +1,6 @@
-export interface Project {
-  name: string
-  description: string
-  tags: string[]
-  liveUrl?: string
-  repoUrl?: string
-  image: string
-}
+import type { Project } from '@/types/project'
 
-export const projects: Project[] = [
+export const projects: readonly Project[] = [
   {
     name: 'Stock Watcher',
     description: 'A web application for tracking stock prices, built with Nuxt 4, Vue 3, TailwindCSS, and powered by the EODHD market data API',
