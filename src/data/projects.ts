@@ -52,5 +52,59 @@ export const projects: Project[] = [
     tags: ['nuxt', 'tailwind', 'supabase'],
     liveUrl: 'https://tercerespai.org/',
     image: '/tercerespai.webp'
+  },
+  {
+    name: 'System Monitor',
+    description: 'System Monitor is a web application for monitoring system resources, built with Node, Express and vanilla javascript.',
+    tags: ['node', 'express', 'vanillajs'],
+    repoUrl: 'https://github.com/dsabalete/system-monitor',
+    image: '/system-monitor.webp'
+  },
+  {
+    name: 'Goat Notes taking app with AI',
+    description: 'GOAT Notes is a modern note-taking application built with Next.js, Supabase, and Prisma. It allows users to create, edit, delete, and search notes, with additional features like AI-powered insights and a responsive design.',
+    tags: ['next', 'supabase', 'prisma'],
+    liveUrl: 'https://fcc-goat-notes.vercel.app/',
+    repoUrl: 'https://github.com/dsabalete/fcc-goat-notes',
+    image: '/goat-notes.webp'
+  },
+  {
+    name: 'QR Code Generator',
+    description: 'Webapp tool for generating QR Codes from valid URLs. Static Astro website with Cloudfare Worker to generate the image.',
+    tags: ['astro', 'cloudflare'],
+    liveUrl: 'https://qr-code-e3h.pages.dev/',
+    repoUrl: 'https://github.com/dsabalete/qr-code',
+    image: '/qrcode.webp'
+  },
+  {
+    name: 'Space tourism',
+    description: 'A website for a space tourism company. It is a static website with responsive design, plain CSS and a bit of vanilla javascript.',
+    tags: ['html', 'css', 'javascript'],
+    liveUrl: 'https://space.davidsabalete.com',
+    repoUrl: 'https://github.com/dsabalete/space-tourism',
+    image: '/space-tourism.webp'
+  },
+  {
+    name: 'Creu Alta website',
+    description: 'Creu Alta Sabadell Basket website. It is running on Drupal as CMS an it has a VueJS app to register players during summer and christmas campus.',
+    tags: ['drupal', 'vue'],
+    liveUrl: 'https://www.creualtabasquet.cat',
+    image: '/creualta.webp'
+  },
+  {
+    name: 'Kiloday calculator',
+    description: 'Alternative birthday calculator app made with Vue, Vite and Pinia',
+    tags: ['vue', 'vite', 'pinia'],
+    liveUrl: 'https://kiloday.davidsabalete.com',
+    repoUrl: 'https://github.com/dsabalete/kiloday',
+    image: '/kiloday.webp'
+  },
+  {
+    name: 'My 1 RM website',
+    description: 'App that calculates the 1RM of any training session. Made with Vuejs and hosted in Netlify.',
+    tags: ['nuxt', 'netlify'],
+    liveUrl: 'https://my-1-rm.netlify.app/',
+    repoUrl: 'https://github.com/dsabalete/my-1-rm',
+    image: '/1rm.webp'
   }
 ]
