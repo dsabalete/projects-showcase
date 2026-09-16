@@ -4,16 +4,16 @@
   --bg: #ffffff;
   --border: #e5e7eb;
   --code-bg: #f9fafb;
-  --accent: #6366f1;
-  --accent-bg: rgba(99, 102, 241, 0.1);
-  --accent-border: rgba(99, 102, 241, 0.5);
+  --accent: #2563eb;
+  --accent-bg: rgba(37, 99, 235, 0.08);
+  --accent-border: rgba(37, 99, 235, 0.35);
   --social-bg: rgba(243, 244, 246, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.1) 0 10px 15px -3px, rgba(0, 0, 0, 0.05) 0 4px 6px -2px;
 
-  --sans: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --heading: system-ui, 'Segoe UI', Roboto, sans-serif;
-  --mono: 'JetBrains Mono', ui-monospace, Consolas, monospace;
+  --sans: system-ui, "Segoe UI", Roboto, sans-serif;
+  --heading: system-ui, "Segoe UI", Roboto, sans-serif;
+  --mono: "JetBrains Mono", ui-monospace, Consolas, monospace;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -36,9 +36,9 @@
   --bg: #1a1b2e;
   --border: #2e3040;
   --code-bg: #282a3d;
-  --accent: #818cf8;
-  --accent-bg: rgba(129, 140, 248, 0.15);
-  --accent-border: rgba(129, 140, 248, 0.5);
+  --accent: #60a5fa;
+  --accent-bg: rgba(96, 165, 250, 0.12);
+  --accent-border: rgba(96, 165, 250, 0.4);
   --social-bg: rgba(47, 48, 58, 0.5);
   --shadow:
     rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
@@ -51,9 +51,9 @@
     --bg: #1a1b2e;
     --border: #2e3040;
     --code-bg: #282a3d;
-    --accent: #818cf8;
-    --accent-bg: rgba(129, 140, 248, 0.15);
-    --accent-border: rgba(129, 140, 248, 0.5);
+    --accent: #60a5fa;
+    --accent-bg: rgba(96, 165, 250, 0.12);
+    --accent-border: rgba(96, 165, 250, 0.4);
     --social-bg: rgba(47, 48, 58, 0.5);
     --shadow:
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
@@ -124,9 +124,10 @@ code {
   h1 {
     font-size: 72px;
     letter-spacing: -2px;
-    margin-bottom: 16px;
+    margin: 8px 0 32px;
     @media (max-width: 1024px) {
       font-size: 48px;
+      margin-bottom: 24px;
     }
   }
 
@@ -138,7 +139,7 @@ code {
   }
 
   @media (max-width: 1024px) {
-    padding: 48px 24px 32px;
+    padding: 72px 24px 32px;
   }
 }
 
@@ -167,7 +168,9 @@ code {
   border: 1px solid var(--border);
   border-radius: 12px;
   overflow: hidden;
-  transition: box-shadow 0.3s, transform 0.3s;
+  transition:
+    box-shadow 0.3s,
+    transform 0.3s;
 }
 
 .project-card:hover {
@@ -268,7 +271,10 @@ code {
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--code-bg);
-  transition: box-shadow 0.3s, color 0.2s, border-color 0.2s;
+  transition:
+    box-shadow 0.3s,
+    color 0.2s,
+    border-color 0.2s;
 
   @media (max-width: 1024px) {
     top: 20px;
@@ -321,17 +327,21 @@ code {
   position: absolute;
   top: 48px;
   right: 48px;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
   background: var(--code-bg);
   border: 1px solid var(--border);
-  border-radius: 8px;
-  padding: 8px 12px;
+  border-radius: 999px;
   cursor: pointer;
-  display: flex;
-  gap: 4px;
-  transition: box-shadow 0.3s;
+  transition:
+    border-color 0.2s,
+    box-shadow 0.2s;
 }
 
 .theme-toggle:hover {
+  border-color: var(--accent-border);
   box-shadow: var(--shadow);
 }
 
@@ -341,20 +351,43 @@ code {
 }
 
 .theme-toggle__icon {
-  font-size: 18px;
-  line-height: 1;
-  opacity: 0.5;
-  transition: opacity 0.3s;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 999px;
+  color: var(--text);
+  opacity: 0.38;
+  transition:
+    opacity 0.2s,
+    background 0.2s,
+    color 0.2s,
+    box-shadow 0.2s;
+
+  svg {
+    width: 15px;
+    height: 15px;
+    display: block;
+  }
 }
 
 .theme-toggle__icon:first-child {
   opacity: 1;
+  color: var(--text-h);
+  background: var(--bg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
 }
 
 .dark .theme-toggle__icon:first-child {
-  opacity: 0.5;
+  opacity: 0.38;
+  background: transparent;
+  box-shadow: none;
+  color: var(--text);
 }
 
 .dark .theme-toggle__icon:last-child {
   opacity: 1;
+  color: var(--text-h);
+  background: var(--bg);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12);
 }
