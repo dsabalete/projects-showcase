@@ -20,6 +20,7 @@ export const projects: Project[] = [
     name: 'AI Portfolio Assistant',
     description: 'An AI chatbot assistant built into this portfolio that answers questions about my experience, skills, projects and availability in multiple languages, with topic matching and analytics',
     tags: ['nuxt', 'vue', 'ai', 'typescript'],
+    liveUrl: 'https://www.davidsabalete.com',
     repoUrl: 'https://github.com/dsabalete/chatbot',
     image: '/chatbot.webp'
   },
@@ -43,7 +44,7 @@ export const projects: Project[] = [
     description: 'A modern web application for tracking gym workouts, built with Nuxt 4, Vue 3, TailwindCSS, and Firebase',
     tags: ['nuxt', 'tailwind', 'firebase'],
     liveUrl: 'https://gym.davidsabalete.com/login/index.html',
-    repoUrl: 'https://github.com/dsabalete/gym-app',
+    repoUrl: 'https://github.com/dsabalete/gym_app',
     image: '/gym_tracker.webp'
   },
   {
@@ -103,7 +104,7 @@ export const projects: Project[] = [
     name: 'My 1 RM website',
     description: 'App that calculates the 1RM of any training session. Made with Vuejs and hosted in Netlify.',
     tags: ['nuxt', 'netlify'],
-    liveUrl: 'https://my-1-rm.netlify.app/',
+    liveUrl: 'https://1rm.davidsabalete.com/',
     repoUrl: 'https://github.com/dsabalete/my-1-rm',
     image: '/1rm.webp'
   }

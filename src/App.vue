@@ -14,6 +14,7 @@ function toggleTheme() {
 <template>
   <main id="app">
     <section id="hero">
+      <a class="site-link" href="https://www.davidsabalete.com" aria-label="Back to main site">← davidsabalete.com</a>
       <h1>Projects</h1>
       <p>A selection of work I've built — from full-stack web apps to AI-powered tools</p>
       <button class="theme-toggle" @click="toggleTheme" aria-label="Toggle theme">
@@ -30,5 +31,11 @@ function toggleTheme() {
         />
       </div>
     </section>
+    <footer id="footer">
+      <p>
+        Built by David Sabalete — see more at
+        <a href="https://www.davidsabalete.com" rel="noopener noreferrer">www.davidsabalete.com</a>
+      </p>
+    </footer>
   </main>
 </template>
