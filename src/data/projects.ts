@@ -2,6 +2,14 @@ import type { Project } from '@/types/project'
 
 export const projects: readonly Project[] = [
   {
+    name: 'Yoga Routine',
+    description: 'A web application for creating and tracking yoga routines, built with Web Audio API, featuring a responsive design and a clean Vue 3 + TypeScript setup',
+    tags: ['vue', 'web audio api', 'typescript'],
+    liveUrl: 'https://yoga.davidsabalete.com',
+    repoUrl: 'https://github.com/dsabalete/yoga-routine',
+    image: '/yoga-routine.webp'
+  },
+  {
     name: 'Stock Watcher',
     description: 'A web application for tracking stock prices, built with Nuxt 4, Vue 3, TailwindCSS, and powered by the EODHD market data API',
     tags: ['nuxt', 'tailwind', 'api'],
